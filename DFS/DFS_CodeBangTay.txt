@@ -1,0 +1,211 @@
+Lần lặp 1:
+while ngăn xếp khác rỗng{  //Stack = {1}
+    u = 1
+    if (1 đã duyệt)
+          //continue; // bỏ qua
+    Duyệt 1
+    Đánh dấu 1 đã duyệt
+    neighbors(1) = {2, 4, 5}
+    for các đỉnh kề v của u
+	v=2:
+        if 2 chưa được duyệt
+            Đưa 2 vào ngăn xếp
+	v=4:
+        if 4 chưa được duyệt
+            Đưa 4 vào ngăn xếp
+	v=5:
+        if 5 chưa được duyệt
+            Đưa 5 vào ngăn xếp
+}
+
+Lần lặp 2:
+while ngăn xếp khác rỗng{  //Stack = {2, 4, (5)}
+    u = 5
+    if (5 đã duyệt)
+          //continue; // bỏ qua
+    Duyệt 5
+    Đánh dấu 5 đã duyệt
+    neighbors(5) = {1, 4, 6, 7}
+    for các đỉnh kề v của u
+	v=1:
+        if 1 Đã được duyệt
+            //Đưa v vào ngăn xếp
+	v=4:
+        if 4 chưa được duyệt
+            Đưa 4 vào ngăn xếp
+	v=6:
+        if 6 chưa được duyệt
+            Đưa 6 vào ngăn xếp
+	v=7:
+        if 7 chưa được duyệt
+            Đưa 7 vào ngăn xếp
+}
+
+Lần lặp 3:
+while ngăn xếp khác rỗng{  //Stack = {2, 4, 4, 6, (7)}
+    u = 7
+    if (7 đã duyệt)
+          //continue; // bỏ qua
+    Duyệt 7
+    Đánh dấu 7 đã duyệt
+    neighbors(7) = {5}
+    for các đỉnh kề v của u
+	v=5:
+        if 5 Đã được duyệt
+            //Đưa v vào ngăn xếp
+}
+
+Lần lặp 4:
+while ngăn xếp khác rỗng{  //Stack != empty
+    u = 6
+    if (6 đã duyệt)
+          //continue; // bỏ qua
+    Duyệt 6
+    Đánh dấu 6 đã duyệt
+    neighbors(6) = {2, 4, 5}
+    for các đỉnh kề v của u
+	v=2:
+        if 2 chưa được duyệt
+            Đưa 2 vào ngăn xếp
+	v=4:
+        if 4 chưa được duyệt
+            Đưa 4 vào ngăn xếp
+	v=5:
+        if 5 Đã được duyệt
+            //Đưa v vào ngăn xếp
+}
+
+Lần lặp 5:
+while ngăn xếp khác rỗng{  //Stack != empty
+    u = 4
+    if (4 đã duyệt)
+          //continue; // bỏ qua
+    Duyệt 4
+    Đánh dấu 4 đã duyệt
+    neighbors(4) = {1, 2, 5, 6}
+    for các đỉnh kề v của u
+	v=1:
+        if 1 Đã được duyệt
+            //Đưa v vào ngăn xếp
+	v=2:
+        if 2 chưa được duyệt
+            Đưa 2 vào ngăn xếp
+	v=5:
+        if 5 Đã được duyệt
+            //Đưa v vào ngăn xếp
+	v=6:
+        if 6 Đã được duyệt
+            //Đưa v vào ngăn xếp
+}
+
+Lần lặp 6:
+while ngăn xếp khác rỗng{  //Stack != empty
+    u = 2
+    if (2 đã duyệt)
+          continue; // bỏ qua
+    Duyệt 2
+    Đánh dấu 2 đã duyệt
+    neighbors(2) = {1, 3, 4, 6}
+    for các đỉnh kề v của u
+	v=1:
+        if 1 Đã được duyệt
+            //Đưa v vào ngăn xếp
+	v=3:
+        if 3 chưa được duyệt
+            Đưa 3 vào ngăn xếp
+	v=4:
+        if 4 Đã được duyệt
+            //Đưa v vào ngăn xếp
+	v=6:
+        if 6 Đã được duyệt
+            //Đưa v vào ngăn xếp
+}
+
+Lần lặp 7:
+while ngăn xếp khác rỗng{  //Stack != empty
+    u = 3
+    if (3 đã duyệt)
+          //continue; // bỏ qua
+    Duyệt 3
+    Đánh dấu 3 đã duyệt
+    neighbors(3) = {2}
+    for các đỉnh kề v của u 
+	v=2:
+        if 2 ĐÃ được duyệt
+            //Đưa 2 vào ngăn xếp
+}
+
+Lần lặp 8:
+while ngăn xếp khác rỗng{  //Stack != empty
+    u = 4
+    if (4 đã duyệt)
+          continue; // bỏ qua
+ /*   Duyệt u
+    Đánh dấu u đã duyệt
+    for các đỉnh kề v của u
+        if v chưa được duyệt
+            Đưa v vào ngăn xếp */
+}
+
+Lần lặp 9:
+while ngăn xếp khác rỗng{  //Stack != empty
+    u = 2
+    if (2 đã duyệt)
+          continue; // bỏ qua
+ /*   Duyệt u
+    Đánh dấu u đã duyệt
+    for các đỉnh kề v của u
+        if v chưa được duyệt
+            Đưa v vào ngăn xếp */
+}
+
+Lần lặp 10:
+while ngăn xếp khác rỗng{  //Stack != empty
+    u = 4
+    if (4 đã duyệt)
+          continue; // bỏ qua
+ /*   Duyệt u
+    Đánh dấu u đã duyệt
+    for các đỉnh kề v của u
+        if v chưa được duyệt
+            Đưa v vào ngăn xếp */
+}
+
+Lần lặp 11:
+while ngăn xếp khác rỗng{  //Stack != empty
+    u = 4
+    if (4 đã duyệt)
+          continue; // bỏ qua
+ /*   Duyệt u
+    Đánh dấu u đã duyệt
+    for các đỉnh kề v của u
+        if v chưa được duyệt
+            Đưa v vào ngăn xếp */
+}
+
+Lần lặp 12:
+while ngăn xếp khác rỗng{  //Stack != empty
+    u = 2
+    if (2 đã duyệt)
+          continue; // bỏ qua
+ /*   Duyệt u
+    Đánh dấu u đã duyệt
+    for các đỉnh kề v của u
+        if v chưa được duyệt
+            Đưa v vào ngăn xếp */
+}
+
+Lần lặp 13:
+while ngăn xếp khác rỗng{  //Stack == empty
+ /* u = 2
+    if (2 đã duyệt)
+          continue; // bỏ qua
+    Duyệt u
+    Đánh dấu u đã duyệt
+    for các đỉnh kề v của u
+        if v chưa được duyệt
+            Đưa v vào ngăn xếp */
+}
+
+
+=> Thứ tự duyệt: 1, 5, 7, 6, 4, 2, 3

@@ -1,0 +1,174 @@
+DFS_DQ(G, 1)
+void DFS_DQ(Graph *G, int 1) {
+	if (1 đã duyệt)
+		//return;
+	Duyệt 1
+	Đánh dấu 1 đã duyệt
+	List neighbors(1) = {(2), (3), (5)}
+	for (các đỉnh kề v của u)
+		DFS_DQ(G, 2);
+		DFS_DQ(G, 3);
+		DFS_DQ(G, 5);
+}
+
+DFS_DQ(G, 2)
+void DFS_DQ(Graph *G, int 2) {
+	if (2 đã duyệt)
+		//return;
+	Duyệt 2
+	Đánh dấu 2 đã duyệt
+	List neighbors(2) = {(1), (4), (6)}
+	for (các đỉnh kề v của u)
+		DFS_DQ(G, 1);
+		DFS_DQ(G, 4);
+		DFS_DQ(G, 6);
+}
+
+DFS_DQ(G, 1)
+void DFS_DQ(Graph *G, int 1) {
+	if (1 đã duyệt)
+		return;
+/*	Duyệt 1
+	Đánh dấu 1 đã duyệt
+	List neighbors(1) = {(3), 5}
+	for (các đỉnh kề v của u)
+		DFS_DQ(G, 3);     */
+}
+
+DFS_DQ(G, 4)
+void DFS_DQ(Graph *G, int 4) {
+	if (4 đã duyệt)
+		//return;
+	Duyệt 4
+	Đánh dấu 4 đã duyệt
+	List neighbors(4) = {2}
+	for (các đỉnh kề v của u)
+		DFS_DQ(G, 2);
+}
+
+DFS_DQ(G, 2)
+void DFS_DQ(Graph *G, int 2) {
+	if (2 đã duyệt)
+		return;
+/*	Duyệt 1
+	Đánh dấu 1 đã duyệt
+	List neighbors(1) = {(3), 5}
+	for (các đỉnh kề v của u)
+		DFS_DQ(G, 3);      */
+}
+
+DFS_DQ(G, 6)
+void DFS_DQ(Graph *G, int 6) {
+	if (6 đã duyệt)
+		//return;
+	Duyệt 6
+	Đánh dấu 6 đã duyệt
+	List neighbors(6) = {(2), (5)}
+	for (các đỉnh kề v của u)
+		DFS_DQ(G, 2);
+		DFS_DQ(G, 5);
+}
+
+DFS_DQ(G, 2)
+void DFS_DQ(Graph *G, int 2) {
+	if (2 đã duyệt)
+		return;
+/*	Duyệt 1
+	Đánh dấu 1 đã duyệt
+	List neighbors(1) = {(3), 5}
+	for (các đỉnh kề v của u)
+		DFS_DQ(G, 3);  */
+}
+
+DFS_DQ(G, 5)
+void DFS_DQ(Graph *G, int 5) {
+	if (5 đã duyệt)
+		//return;
+	Duyệt 5
+	Đánh dấu 5 đã duyệt
+	List neighbors(5) = {(1), (6)}
+	for (các đỉnh kề v của u)
+		DFS_DQ(G, 1);
+		DFS_DQ(G, 6);
+}
+
+DFS_DQ(G, 1)
+void DFS_DQ(Graph *G, int 1) {
+	if (1 đã duyệt)
+		return;
+/*	Duyệt 1
+	Đánh dấu 1 đã duyệt
+	List neighbors(1) = {(3), 5}
+	for (các đỉnh kề v của u)
+		DFS_DQ(G, 3);  */
+}
+
+DFS_DQ(G, 6)
+void DFS_DQ(Graph *G, int 6) {
+	if (6 đã duyệt)
+		return;
+/*	Duyệt 1
+	Đánh dấu 1 đã duyệt
+	List neighbors(1) = {(3), 5}
+	for (các đỉnh kề v của u)
+		DFS_DQ(G, 3);  */
+}
+
+DFS_DQ(G, 3)
+void DFS_DQ(Graph *G, int 3) {
+	if (3 đã duyệt)
+		//return;
+	Duyệt 3
+	Đánh dấu 3 đã duyệt
+	List neighbors(3) = {(1), (7)}
+	for (các đỉnh kề v của u)
+		DFS_DQ(G, 1);
+		DFS_DQ(G, 7);
+}
+
+DFS_DQ(G, 1)
+void DFS_DQ(Graph *G, int 1) {
+	if (1 đã duyệt)
+		return;
+/*	Duyệt 1
+	Đánh dấu 1 đã duyệt
+	List neighbors(1) = {(3), 5}
+	for (các đỉnh kề v của u)
+		DFS_DQ(G, 3);  */
+}
+
+DFS_DQ(G, 7)
+void DFS_DQ(Graph *G, int 7) {
+	if (7 đã duyệt)
+		//return;
+	Duyệt 7
+	Đánh dấu 7 đã duyệt
+	List neighbors(7) = {3}
+	for (các đỉnh kề v của u)
+		DFS_DQ(G, 3);
+}
+
+DFS_DQ(G, 3)
+void DFS_DQ(Graph *G, int 3) {
+	if (3 đã duyệt)
+		return;
+/*	Duyệt 1
+	Đánh dấu 1 đã duyệt
+	List neighbors(1) = {(3), 5}
+	for (các đỉnh kề v của u)
+		DFS_DQ(G, 3);  */
+}
+
+DFS_DQ(G, 5)
+void DFS_DQ(Graph *G, int 5) {
+	if (5 đã duyệt)
+		return;
+/*	Duyệt 1
+	Đánh dấu 1 đã duyệt
+	List neighbors(1) = {(3), 5}
+	for (các đỉnh kề v của u)
+		DFS_DQ(G, 3);  */
+}
+
+
+=>Thứ tự duyệt: 1, 2, 4, 6, 5, 3, 7
