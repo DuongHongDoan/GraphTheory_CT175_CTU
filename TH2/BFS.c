@@ -18,13 +18,13 @@ void init_graph(Graph *pG, int n) {
 
 void add_edge(Graph *pG, int u, int v) {
 /*Vo huong*/
-//	pG->a[u][v] += 1;
-//	if (u!=v)
-//		pG->a[v][u] += 1;
-//	pG->m++;
-/*Co huong*/
 	pG->a[u][v] += 1;
+	if (u!=v)
+		pG->a[v][u] += 1;
 	pG->m++;
+/*Co huong*/
+//	pG->a[u][v] += 1;
+//	pG->m++;
 }
 
 int adjacent (Graph *pG, int u, int v) {
@@ -114,13 +114,12 @@ int main () {
 //	scanf ("%d", &s);	
 //	BFS(&G, s);
 /*Duyet dinh cu the*/	
-//	BFS(&G, 1);
+	BFS(&G, 1);
 /*Duyet toan bo do thi*/
-	for (i=1; i<=n; i++) {
-		if (mark[i] == 0)
-			BFS(&G, i);
-	}
+//	for (i=1; i<=n; i++) {
+//		if (mark[i] == 0)
+//			BFS(&G, i);
+//	}
 	
 	return 0;
 }
-

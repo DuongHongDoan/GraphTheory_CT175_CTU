@@ -54,7 +54,6 @@ void DFS_DQ(Graph *pG, int u, int p) {
 				start = u;
 				end = v;
 			}
-			
 		}
 	}
 	
