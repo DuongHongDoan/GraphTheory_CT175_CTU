@@ -63,7 +63,7 @@ Input     Result
 
 ### **Giải quyết bài toán**
 
-* [Come_and_Go](TH2/Come_and_Go.c)
+* [Come_and_Go](https://github.com/DuongHongDoan/GraphTheory_CT175_CTU/blob/main/TH2_LienThongCuaDoThi/Come_and_Go.c)
 -----
 ## 2. **Phân chia đội bóng**
 
