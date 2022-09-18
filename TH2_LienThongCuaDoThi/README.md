@@ -113,7 +113,7 @@ Input     Result
 
 ### **Giải quyết bài toán**
 
-* [PhanChiaDoiBong](TH2/PhanChiaDoiBong.c)
+* [PhanChiaDoiBong](https://github.com/DuongHongDoan/GraphTheory_CT175_CTU/blob/main/TH2_LienThongCuaDoThi/PhanChiaDoiBong.c)
 -----
 ## 3. **Qua Đảo (ứng dụng kiểm tra đồ thị liên thông)**
  Có n hòn đảo và m cây cầu. Mỗi cây cầu bắt qua 2 hòn đảo. Một hôm chúa đảo tự hỏi là với các cây cầu hiện tại thì đứng ở một hòn đảo bất kỳ có thể nào đi đến được tất cả các hòn đảo khác mà không cần dùng đến thuyền hay không.
@@ -150,7 +150,7 @@ Input     Result
 
 ### **Giải quyết bài toán**
 
-* [QuaDao](TH2/QuaDao.c)
+* [QuaDao](https://github.com/DuongHongDoan/GraphTheory_CT175_CTU/blob/main/TH2_LienThongCuaDoThi/QuaDao.c)
 -----
 ## 4. **Trust Group (nguồn: UVA Online Judge, Problem 11709)**
  Phòng nhân sự của tổ chức Association of Cookie Monsters (ACM) nhận thấy rằng gần đây hiệu quả làm việc của các nhân viên có chiều hướng giảm sút. Vì thế họ đã lấy ý kiến các nhân viên và phát hiện ra nguyên nhân của vấn đề này, đó là: sự tin cậy. Một số nhân viên không tin cậy vào các nhân viên khác trong nhóm làm việc của mình. Điều này làm giảm động lực và niềm vui trong công việc của các nhân viên.
@@ -208,7 +208,7 @@ Input     Result
 
 ### **Giải quyết bài toán**
 
-* [Trust_Groups](TH2/Trust_Groups.c)
+* [Trust_Groups](https://github.com/DuongHongDoan/GraphTheory_CT175_CTU/blob/main/TH2_LienThongCuaDoThi/Trust_Groups.c)
 -----
 ## 5. **Tham chiếu vòng trong Microsoft Excel**
  Microsoft Excel là chương trình xử lý bảng tính nằm trong bộ Microsoft Office của hãng phần mềm Microsoft. Excel được thiết kế để giúp ghi lại, trình bày các thông tin xử lý dưới dạng bảng, thực hiện tính toán và xây dựng các số liệu thống kê trực quan.
@@ -255,7 +255,7 @@ Input     Result
 
 ### **Giải quyết bài toán**
 
-* [ThamChieuVong_Excel](TH2/ThamChieuVong_Excel.c)
+* [ThamChieuVong_Excel](https://github.com/DuongHongDoan/GraphTheory_CT175_CTU/blob/main/TH2_LienThongCuaDoThi/ThamChieuVong_Excel.c)
 -----
 ## 6. **Thuyền trưởng Haddock (truyện Tintin)**
  Thuyền trưởng Haddock (truyện Tintin) là một người luôn say xỉn. Vì thế đôi khi Tintin không biết ông ta đang say hay tỉnh. Một ngày nọ, Tintin hỏi ông ta về cách uống. Haddock nói như thế này: Có nhiều loại thức uống (soda, wine, water, …), tuy nhiên Haddock lại tuân theo quy tắc “để uống một loại thức uống nào đó cần phải uống tất cả các loại thức uống tiên quyết của nó”. Ví dụ: để uống rượu (wine), Haddock cần phải uống soda và nước (water) trước. Vì thế muốn say cũng không phải dễ!
@@ -329,5 +329,5 @@ Input     Result
 
 ### **Giải quyết bài toán**
 Bài toán được giải quyết tương tự bài kiểm tra đồ thị có chu trình
-* [KiemTra_ChuTrinh](TH2/KiemTra_ChuTrinh.c)
+* [KiemTra_ChuTrinh](https://github.com/DuongHongDoan/GraphTheory_CT175_CTU/blob/main/TH2_LienThongCuaDoThi/KiemTra_ChuTrinh.c)
 -----
