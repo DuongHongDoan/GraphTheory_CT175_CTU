@@ -25,10 +25,11 @@ int p[MAX_N];//luu cha cua dinh dang xet
 int mark[MAX_N];
 
 void Dijkstra(Graph *pG, int s=1) {
-    for (int u = 1; u <= pG->n=8; u++)
-        mark[u] = 0;
-        pi[u] = oo; 
-    }
+    for (int u = 1; u <= pG->n=8; u++) {
+		mark[u] = 0;
+        pi[u] = oo;
+	}
+         
     pi[s=1] = 0;
     p[s=1] = -1;
     
@@ -245,7 +246,7 @@ int p[MAX_N];//luu cha cua dinh dang xet
 int mark[MAX_N];
 
 void Dijkstra(Graph *pG, int s=1) {
-    for (int u = 1; u <= pG->n=8; u++)
+    for (int u = 1; u <= pG->n=8; u++){
         mark[u] = 0;
         pi[u] = oo; 
     }
