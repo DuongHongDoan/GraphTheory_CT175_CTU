@@ -1,0 +1,44 @@
+#define oo 999999
+#define NO_EDGE 0
+typedef struct {
+    int A[MAX_N][MAX_N];
+    int m, n;
+} Graph;
+
+int pi[MAX_N];//chieu dai duong di ngan nhat
+int p[MAX_N];//luu cha cua dinh dang xet
+int mark[MAX_N];
+
+void Dijkstra(Graph *pG, int s=1) {
+    for (int u = 1; u <= pG->n=8; u++)
+        mark[u] = 0;
+        pi[u] = oo; 
+    }
+    pi[s=1] = 0;//chieu dai duong di ngan nhat tu s den chinh no la bang 0
+    p[s=1] = -1;//truoc dinh s khong co dinh nao ca (hieu la dinh goc)
+    
+    //Lap n-1 lan
+    for (int i = 1; i <= pG->n - 1; i++) {
+    //1. Tim u co mark[u]==0 va co pi[u] nho nhat
+        int min_pi = oo;
+        for (int j = 1; j <= pG->n; j++){
+        	if (mark[j]==0 && pi[j] < min_pi) {
+                min_pi = pi[j];
+                u = j;
+            }
+		}
+        
+        //2. Danh dau u da xet xong
+        mark[u] = 1;
+
+		//3. Cap nhat pi va p cua dinh ke v(neu thoa)
+        for (int v = 1; v <= pG->n; v++){
+        	if (pG->A[u][v] != NO_EDGE && mark[v]==0) {
+            	if (pi[u] + pG->A[u][v] < pi[v]) {
+        			pi[v] = pi[u] + pG->A[u][v]; 
+            		p[v] = u;	
+				}
+            }
+		} 
+    }
+}

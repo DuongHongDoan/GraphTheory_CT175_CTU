@@ -1,0 +1,33 @@
+// Các biến hỗ trợ
+int num[MAX_N], min_num[MAX_N];
+int k;
+Stack S;
+int on_stack[MAX_N];
+//Duyệt đồ thị bắt đầu từ đỉnh u
+void SCC(Graph *pG, int u) {
+	//1. Đánh số u, đưa u vào ngăn xếp S
+	num[u] = min_num[u] = k; k++;
+	push(&S, u);
+	on_stack[u] = 1;
+	//2. Xét các đỉnh kề của u
+	for (int v = 1; v <= pG->n; v++) {
+		if (adjacent(pG, u, v)) {
+			if (num[v] < 0) {
+				SCC(pG, v);
+				min_num[u] = min(min_num[u], min_num[v]);
+			} else if (on_stack[v])
+				min_num[u] = min(min_num[u], num[v]);
+
+		}
+	}
+	//3. Kiểm tra u có phải là đỉnh khớp
+	if (num[u] == min_num[u]) {
+		printf("Tim duoc BPLT manh, %d la dinh khop.\n", u);
+		int w;
+		do { //Lấy các đỉnh trong S ra cho đến khi gặp u
+			w = top(&S);
+			pop(&S);
+			on_stack[w] = 0;
+		} while (w != u);
+	}
+}
