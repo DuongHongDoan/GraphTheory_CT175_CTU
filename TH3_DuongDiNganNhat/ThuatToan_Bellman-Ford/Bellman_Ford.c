@@ -25,93 +25,46 @@ void add_edge(Graph *pG, int u, int v, int w) {
 
 int pi[max_n], p[max_n];
 int negative_cycle = 0;
-void BellmanFord(Graph *pG,int s) {
-	int u, v, w,i, k;
-	for (u=1; u<=pG->n; u++) {
+int BellmanFord(Graph *pG, int s) {
+	int u, v, w, it, k;
+	for (u = 1; u <= pG->n; u++) {
 		pi[u] = oo;
-		p[u] = 0;
 	}
-	
 	pi[s] = 0;
-	p[s] = -1;
-	
-	
-	for (i=1; i<pG->n; i++) {
-		for (k=0; k<pG->m; k++) {
+	p[s] = -1; //truoc dinh s khong co dinh nao
+
+	// lap n-1 lan
+	for (it = 1; it < pG->n; it++) {
+		// Duyet qua cï¿½c cung vï¿½ cap nhat (neu thoa)
+		for (k = 0; k < pG->m; k++) {
 			u = pG->edges[k].u;
 			v = pG->edges[k].v;
 			w = pG->edges[k].w;
-			if (pi[u] == oo)
-				continue;
+			
+			if (pi[u] == oo)    //chua cï¿½ duong di tu s -> u, bo qua cung nï¿½y
+			    continue;
+			    
 			if (pi[u] + w < pi[v]) {
 				pi[v] = pi[u] + w;
 				p[v] = u;
 			}
 		}
 	}
-	
-	//Kiem tra chu trinh am
-	for (k=0; k<pG->m; k++) {
+	//Lï¿½m thï¿½m 1 lan nua de kiem tra chu trï¿½nh ï¿½m (neu can thiet)
+	for (k = 0; k < pG->m; k++) {
 		u = pG->edges[k].u;
 		v = pG->edges[k].v;
 		w = pG->edges[k].w;
-		int t = pi[u] + w;
-		if ((t<=oo && t>=900000)) {
-			t = oo;
-			if (t < pi[v]) {
-				negative_cycle = 1;
-				break;
-			}
+		
+		if (pi[u] == oo)    //chua cï¿½ duong di tu s -> u, bo qua cung nï¿½y
+		    continue;
+		    
+		if (pi[u] + w < pi[v]) {
+			return 1;
 		}
-		else if(t<oo) {
-			if (t < pi[v]) {
-				negative_cycle = 1;
-				break;
-			}
-		}	
 	}
+	return 0;
 }
-
-//int BellmanFord(Graph *pG, int s) {
-//	int u, v, w, it, k;
-//	for (u = 1; u <= pG->n; u++) {
-//		pi[u] = oo;
-//	}
-//	pi[s] = 0;
-//	p[s] = -1; //truoc dinh s khong co dinh nao
-//
-//	// lap n-1 lan
-//	for (it = 1; it < pG->n; it++) {
-//		// Duyet qua các cung và cap nhat (neu thoa)
-//		for (k = 0; k < pG->m; k++) {
-//			u = pG->edges[k].u;
-//			v = pG->edges[k].v;
-//			w = pG->edges[k].w;
-//			
-//			if (pi[u] == oo)    //chua có duong di tu s -> u, bo qua cung này
-//			    continue;
-//			    
-//			if (pi[u] + w < pi[v]) {
-//				pi[v] = pi[u] + w;
-//				p[v] = u;
-//			}
-//		}
-//	}
-//	//Làm thêm 1 lan nua de kiem tra chu trình âm (neu can thiet)
-//	for (k = 0; k < pG->m; k++) {
-//		u = pG->edges[k].u;
-//		v = pG->edges[k].v;
-//		w = pG->edges[k].w;
-//		
-//		if (pi[u] == oo)    //chua có duong di tu s -> u, bo qua cung này
-//		    continue;
-//		    
-//		if (pi[u] + w < pi[v]) {
-//			return 1;
-//		}
-//	}
-//	return 0;
-//}
 
 int main () {
 	Graph G;
