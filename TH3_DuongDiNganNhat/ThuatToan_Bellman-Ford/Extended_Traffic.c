@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 #define max_n 50
 #define oo 999999
 
@@ -23,7 +24,7 @@ void add_edge(Graph *pG, int u, int v, int w) {
 	pG->m++;
 }
 
-int pi[max_n], p[max_n];
+int pi[max_n], p[max_n], b[max_n];
 int negative_cycle = 0;
 int BellmanFord(Graph *pG, int s) {
 	int u, v, w, it, k;
@@ -73,42 +74,23 @@ int main () {
 	scanf ("%d%d", &n, &m);
 	init_graph(&G, n);
 	
+	for (u=1; u<=n;u++) {
+		scanf ("%d", &b[u]);
+	}
+	
 	for (e=1; e<=m; e++) {
-		scanf ("%d%d%d", &u, &v, &w);
+		scanf ("%d%d", &u, &v);
+		w = pow(b[v]-b[u], 3);
 		add_edge(&G, u, v, w);
 	}
 	
 	scanf ("%d%d", &s, &t);
 	BellmanFord(&G, s);
-/*kiem tra chu trinh am*/	
-	// if (BellmanFord(&G, s)==1)
-	// 	printf ("YES\n");
-	// else 
-	// 	printf ("NO\n");
-/*in ra chieu dai duong di ngan nhat va dinh truoc no*/	
-//	for (u=1; u<=n; u++) {
-//		printf ("pi[%d] = %d, p[%d] = %d\n", u, pi[u], u, p[u]);
-//	}
+	
 /*In ra chieu dai DDNN tu dinh s den dinh t*/
 	if (pi[t] != oo)
 		printf ("%d", pi[t]);
 	else printf ("-1");
 
-/*In duong di ngan nhat tu dinh s den dinh t*/
-	int path[max_n];
-	int k=0;
-	int current = t;
-	
-	while (current!=-1) {
-		path[k] = current;
-		k++;
-		current = p[current];
-	}
-	
-	for(u=k-1; u>=0; u--){
-		printf ("%d ", path[u]);
-		if (u>0)
-			printf ("-> ");	
-	}
 	return 0;
 }
