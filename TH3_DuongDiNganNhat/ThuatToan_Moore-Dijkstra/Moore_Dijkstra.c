@@ -25,7 +25,7 @@ void add_edge(Graph *pG, int u, int v, int w) {
 //	pG->m++;
 }
 
-int pi[max_n], p[max_n], mark[max_n];
+int pi[max_n], p[max_n], mark[max_n], count[max_n];
 void Moore_Dijkstra(Graph *pG, int s) {
 	int u;
 	for (u=1; u<=pG->n; u++) {
@@ -50,11 +50,16 @@ void Moore_Dijkstra(Graph *pG, int s) {
 		mark[u] = 1;
 		
 		int v;
+		count[u]=1;
 		for (v=1; v<=pG->n; v++) {
 			if (pG->a[u][v] != -1 && mark[v] == 0) {
 				if (pi[u] + pG->a[u][v] < pi[v]) {
 					pi[v] = pi[u] + pG->a[u][v];
 					p[v] = u;
+					count[v] = count[u];
+				}
+				else if (pi[u] + pG->a[u][v] == pi[v]) {
+					count[v] += count[u];
 				}
 			}
 		}
@@ -73,7 +78,10 @@ int main () {
 		add_edge(&G, u, v, w);
 	}
 	
-//	Moore_Dijkstra(&G, 1);
+	Moore_Dijkstra(&G, 1);
+//	int s, t;
+//	scanf ("%d%d", &s, &t);
+//	Moore_Dijkstra(&G, s);
 	
 /*In ra duong di ngan nhat va cha cua no*/
 //	for (u=1; u<=n; u++) {
@@ -81,28 +89,25 @@ int main () {
 //	}
 
 /*In ra duong di ngan nhat tu 1 den n, neu khong duong di thi in ra -1*/
-//	if (pi[n] != oo)
-//		printf ("%d\n", pi[n]);
-//	else printf ("-1");
+	if (pi[n] != oo)
+		printf ("%d %d\n", pi[n], count[n]);
+	else printf ("-1 0");
 /*In duong di ngan nhat tu dinh s den dinh t */
-	int s, t;
-	scanf ("%d%d", &s, &t);
-	Moore_Dijkstra(&G, s);
-	int path[max_n];
-	int k=0;
-	int current = t;
-	
-	while (current != -1) {
-		path[k] = current;
-		k++;
-		current = p[current];
-	}
-	
-	for (u=k-1; u>=0; u--) {
-		printf ("%d ", path[u]);
-		if (u>0)
-			printf ("-> ");
-	}
+//	int path[max_n];
+//	int k=0;
+//	int current = t;
+//	
+//	while (current != -1) {
+//		path[k] = current;
+//		k++;
+//		current = p[current];
+//	}
+//	
+//	for (u=k-1; u>=0; u--) {
+//		printf ("%d ", path[u]);
+//		if (u>0)
+//			printf ("-> ");
+//	}
 		
 	return 0;
 }
