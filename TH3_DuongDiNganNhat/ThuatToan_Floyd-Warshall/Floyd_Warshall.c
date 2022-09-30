@@ -86,14 +86,14 @@ int main () {
 	FloydWarshall(&G);
 	
 /*In chieu dai ngan nhat giua cac cap dinh*/
-//	for (u=1; u<=n; u++) {
-//		for (v=1; v<=n; v++) {
-//			if (pi[u][v] == oo)
-//				printf("%d -> %d: NO PATH\n", u, v);
-//			else 
-//				printf("%d -> %d: %d\n", u, v, pi[u][v]);
-//		}
-//	}
+	for (u=1; u<=n; u++) {
+		for (v=1; v<=n; v++) {
+			if (pi[u][v] == oo)
+				printf("%d -> %d: NO PATH\n", u, v);
+			else 
+				printf("%d -> %d: %d\n", u, v, pi[u][v]);
+		}
+	}
 
 /*In duong di ngan nhat giua cac cap dinh*/
 //	for (u=1; u<=n; u++) {
@@ -113,9 +113,9 @@ int main () {
 //	}
 
 /*Kiem tra chu trinh am*/
-	if(negative_cycle == 1)
-		printf("YES");
-	else 
-		printf("NO");
-	return 0;
+//	if(negative_cycle == 1)
+//		printf("YES");
+//	else 
+//		printf("NO");
+//	return 0;
 }
