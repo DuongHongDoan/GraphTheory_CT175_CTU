@@ -87,7 +87,8 @@ void topo_rank(Graph *pG) {
 			for (v=1; v<=pG->n; v++) {
 				if(pG->a[u][v] != 0){
 					d[v]--;
-					addList(&L2, v);
+					if (d[v] == 0)
+						addList(&L2, v);
 				}
 			}
 		}
