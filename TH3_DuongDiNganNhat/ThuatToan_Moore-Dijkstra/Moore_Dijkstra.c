@@ -20,9 +20,9 @@ void init_graph(Graph *pG, int n) {
 
 void add_edge(Graph *pG, int u, int v, int w) {
 	pG->a[u][v] = w;
-//	if (u!=v)
-//		pG->a[v][u] = w;
-//	pG->m++;
+	if (u!=v)
+		pG->a[v][u] = w;
+	pG->m++;
 }
 
 int pi[max_n], p[max_n], mark[max_n], count[max_n];
@@ -84,14 +84,14 @@ int main () {
 //	Moore_Dijkstra(&G, s);
 	
 /*In ra duong di ngan nhat va cha cua no*/
-//	for (u=1; u<=n; u++) {
-//		printf ("pi[%d] = %d, p[%d] = %d\n", u, pi[u], u, p[u]);
-//	}
+	for (u=1; u<=n; u++) {
+		printf ("pi[%d] = %d, p[%d] = %d\n", u, pi[u], u, p[u]);
+	}
 
 /*In ra duong di ngan nhat tu 1 den n, neu khong duong di thi in ra -1*/
-	if (pi[n] != oo)
-		printf ("%d %d\n", pi[n], count[n]);
-	else printf ("-1 0");
+//	if (pi[n] != oo)
+//		printf ("%d %d\n", pi[n], count[n]);
+//	else printf ("-1 0");
 /*In duong di ngan nhat tu dinh s den dinh t */
 //	int path[max_n];
 //	int k=0;
