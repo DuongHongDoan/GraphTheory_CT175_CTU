@@ -41,11 +41,11 @@ void makenullQueue(Queue *pQ) {
 	pQ->rear = -1;
 }
 
-int emptyQueue(Queue *pQ) {
+int empty(Queue *pQ) {
 	return pQ->front > pQ->rear;
 }
 
-int fullQueue(Queue *pQ) {
+int full(Queue *pQ) {
 	return pQ->rear - pQ->front + 1 == max_Q;
 }
 
@@ -54,8 +54,8 @@ int getTop(Queue *pQ) {
 }
 
 void enQueue(Queue *pQ, int x) {
-	if (!fullQueue(pQ)) {
-		if (emptyQueue(pQ)) {
+	if (!full(pQ)) {
+		if (empty(pQ)) {
 			pQ->front = 0;
 		}
 		pQ->rear = pQ->rear + 1;
@@ -64,7 +64,7 @@ void enQueue(Queue *pQ, int x) {
 }
 
 void deQueue (Queue *pQ) {
-	if (!emptyQueue(pQ)) {
+	if (!empty(pQ)) {
 		pQ->front = pQ->front + 1;
 		if (pQ->front > pQ->rear)
 			makenullQueue(pQ);
@@ -74,22 +74,33 @@ void deQueue (Queue *pQ) {
 /*--------------Ham duyet Dt theo chieu rong----------*/
 int mark[max_n];
 void BFS (Graph *pG, int s) {
+	//1. Tao hang doi 
 	Queue Q;
 	makenullQueue(&Q);
+	
+	// 2. Dua phan tu dau tien can duyet vao hang doi
 	enQueue(&Q, s);
 	
-	while (!emptyQueue(&Q)) {
+	// 3. Lap cho den khi hag doi rong
+	while(!empty(&Q)) {
+		// 3.1. Lay phan tu dau hang doi ra xet va xoa no di
 		int u = getTop(&Q);
 		deQueue(&Q);
-		if (mark[u] != 0)
+		// 3.2. Neu u da duyet thi bo qua
+		if(mark[u] != 0)
 			continue;
-		printf ("%d\n", u);
+		
+		// 3.3. Neu u chua duyet thi danh dau no da duyet
+		printf ("%d\n", u);	
 		mark[u] = 1;
+		
+		// 3.4. Xet cac dinh ke v cua u va chua duoc duyet
 		int v;
 		for (v=1; v<=pG->n; v++) {
-			if (adjacent(pG, u, v))
+			if (adjacent(pG, u, v) && mark[v] == 0) {
 				enQueue(&Q, v);
-		}
+			}
+		}	
 	}
 }
 

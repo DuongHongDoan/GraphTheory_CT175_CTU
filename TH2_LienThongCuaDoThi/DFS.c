@@ -42,7 +42,7 @@ void makenullStack(Stack *pS) {
 	pS->top = max_S;
 }
 
-int emptyStack(Stack *pS) {
+int empty(Stack *pS) {
 	return pS->top == max_S;
 }
 
@@ -62,20 +62,30 @@ void pop (Stack *pS) {
 /*-----------Ham duyet do thi theo chieu sau--------------*/
 int mark[max_n];
 void DFS(Graph *pG, int s) {
+	// 1. Tao ngan xep
 	Stack S;
 	makenullStack(&S);
+	
+	// 2. Dua phan tu dau tien can xet vao Ngan xep
 	push(&S, s);
 	
-	while (!emptyStack(&S)) {
+	//3. Lap cho den khi Ngan xep rong
+	while (!empty(&S)) {
+		//3.1. Lay phan tu dau ngan xep ra xet va xoa no di
 		int u = getTop(&S);
 		pop(&S);
-		if (mark[u] != 0)
+		
+		//3.2. Kiem tra u duyet roi thi bo qua
+		if(mark[u] != 0)
 			continue;
+		//3.3. Neu chua duyet thi danh dau da duyet
 		printf ("%d\n", u);
 		mark[u] = 1;
+		
+		//3.4. Xet cac dinh ke v cua u va v chua duoc duyet
 		int v;
 		for (v=1; v<=pG->n; v++) {
-			if (adjacent(pG, u, v))
+			if (pG->a[u][v] != 0 && mark[v] == 0)
 				push(&S, v);
 		}
 	}
@@ -102,10 +112,10 @@ int main () {
 //	scanf ("%d", &s);	
 //	DFS(&G, s);
 /*Duyet dinh cu the*/	
-//	DFS(&G, 1);
+	DFS(&G, 1);
 /*Duyet toan bo do thi*/
-	for (i=1; i<=n; i++) {
-		if (mark[i] == 0)
-			DFS(&G, i);
-	}
+//	for (i=1; i<=n; i++) {
+//		if (mark[i] == 0)
+//			DFS(&G, i);
+//	}
 }

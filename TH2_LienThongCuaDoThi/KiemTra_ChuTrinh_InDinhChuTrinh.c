@@ -96,6 +96,18 @@ int main () {
 		for (j=i; j>=0; j--)
 			printf ("%d ",a[j]);
 		printf ("%d\n", a[i]);
+	//Doan chuong trinh khong dung bien start, end	
+//		int a[100], i=0, j;
+//		int u = a[0];
+//		do {
+//			u = parent[u];
+//			i++;
+//			a[i] = u;
+//		}while (u!=v);
+//		
+//		for (j=i; j>=0; j--)
+//			printf ("%d ",a[j]);
+//		printf ("%d\n", a[i]);
 	}
 	else
 		printf ("-1");

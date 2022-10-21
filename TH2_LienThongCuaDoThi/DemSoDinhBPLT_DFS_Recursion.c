@@ -62,6 +62,7 @@ int main () {
 //	int s;
 //	scanf ("%d", &s);
 //	DFS(&G, s);
+// printf ("%d", count_V);
 /*Tim BPLT co nhieu dinh nhat*/
 	int max_ctn = 0;
 	for (i=1; i<=n; i++) {
