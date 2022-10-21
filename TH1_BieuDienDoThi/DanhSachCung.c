@@ -36,10 +36,12 @@ void add_edge(Graph *pG, int u, int v) {
 	pG->edges[pG->m].v = v;		
 	pG->m++;
 /*Nang cao 3 - Xem Else => Da hieu*/
+//	if(u==v)
+//		return;
 //	int i;
 //	for (i=0; i<pG->m; i++) 
 //		if ((u == pG->edges[i].u && v == pG->edges[i].v) ||
-//		     (v == pG->edges[i].u && u == pG->edges[i].v)) {
+//		     (v == pG->edges[i].u && u == pG->edges[i].v) || u==v) {
 //			return;
 //		}
 //	pG->edges[pG->m].u = u;
